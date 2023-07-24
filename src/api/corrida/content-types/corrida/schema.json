@@ -26,15 +26,6 @@
       "maxLength": 300,
       "required": true
     },
-    "Descricao": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text",
-      "required": true
-    },
     "Banheiro": {
       "pluginOptions": {
         "i18n": {
@@ -70,6 +61,15 @@
         }
       },
       "type": "datetime",
+      "required": true
+    },
+    "Content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext",
       "required": true
     }
   }
