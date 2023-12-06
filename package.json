@@ -7,7 +7,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "vercel-build": "strapi build"
   },
   "dependencies": {
     "@strapi/plugin-documentation": "^4.11.7",
