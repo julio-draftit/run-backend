@@ -15,15 +15,13 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18' # Escolha a versão do Node.js que você está usando
+        node-version: '18'
 
     - name: Install dependencies
       run: npm install
 
     - name: Build
       run: npm run build
-
-    # Adicione aqui outros passos de teste se necessário
 
     - name: Deploy to server
       uses: appleboy/ssh-action@master
@@ -33,14 +31,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /var/www/html/run-backend/
-          sudo git pull
+          git pull
           npm install
           pm2 restart all
-
-    - name: Restart application with PM2
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: pm2 restart all # ou use o nome específico do seu processo PM2
