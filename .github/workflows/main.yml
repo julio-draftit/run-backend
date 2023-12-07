@@ -26,15 +26,16 @@ jobs:
     # Adicione aqui outros passos de teste se necessário
 
     - name: Deploy to server
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SOURCE: "."
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: ${{ secrets.REMOTE_TARGET }}
-        EXCLUDE: "/node_modules/, /test/"
-        # Adicione outras opções conforme necessário
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd /var/www/html/run-backend/
+          git pull
+          npm install
+          pm2 restart all
 
     - name: Restart application with PM2
       uses: appleboy/ssh-action@master
