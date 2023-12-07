@@ -33,7 +33,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /var/www/html/run-backend/
-          git pull
+          sudo git pull
           npm install
           pm2 restart all
 
