@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -23,12 +23,6 @@
         }
       },
       "type": "string"
-    },
-    "corrida": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::corrida.corrida",
-      "inversedBy": "categorias"
     }
   }
 }

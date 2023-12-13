@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -26,16 +26,7 @@
       "maxLength": 300,
       "required": true
     },
-    "Banheiro": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "boolean",
-      "default": false
-    },
-    "Cover": {
+    "Imagem": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -48,11 +39,10 @@
         }
       }
     },
-    "categorias": {
+    "categoria": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::categoria.categoria",
-      "mappedBy": "corrida"
+      "relation": "oneToOne",
+      "target": "api::categoria.categoria"
     },
     "DataEvento": {
       "pluginOptions": {
@@ -71,6 +61,19 @@
       },
       "type": "richtext",
       "required": true
+    },
+    "Local": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "organizador": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::organizador.organizador"
     }
   }
 }
