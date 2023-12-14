@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "privacy_policys",
+  "info": {
+    "singularName": "privacy-policy",
+    "pluralName": "privacy-policys",
+    "displayName": "Politíca e Privacidade",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Conteudo": {
+      "type": "richtext"
+    },
+    "Banner": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

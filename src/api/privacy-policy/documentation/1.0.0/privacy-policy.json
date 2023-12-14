@@ -1,5 +1,5 @@
 {
-  "/sobre": {
+  "/privacy-policy": {
     "get": {
       "responses": {
         "200": {
@@ -7,7 +7,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/SobreResponse"
+                "$ref": "#/components/schemas/PrivacyPolicyResponse"
               }
             }
           }
@@ -64,7 +64,7 @@
         }
       },
       "tags": [
-        "Sobre"
+        "Privacy-policy"
       ],
       "parameters": [
         {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/sobre"
+      "operationId": "get/privacy-policy"
     },
     "put": {
       "responses": {
@@ -178,7 +178,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/SobreResponse"
+                "$ref": "#/components/schemas/PrivacyPolicyResponse"
               }
             }
           }
@@ -235,16 +235,16 @@
         }
       },
       "tags": [
-        "Sobre"
+        "Privacy-policy"
       ],
       "parameters": [],
-      "operationId": "put/sobre",
+      "operationId": "put/privacy-policy",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/SobreRequest"
+              "$ref": "#/components/schemas/PrivacyPolicyRequest"
             }
           }
         }
@@ -315,10 +315,10 @@
         }
       },
       "tags": [
-        "Sobre"
+        "Privacy-policy"
       ],
       "parameters": [],
-      "operationId": "delete/sobre"
+      "operationId": "delete/privacy-policy"
     }
   }
 }
