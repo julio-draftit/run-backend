@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedbacks",
+  "info": {
+    "singularName": "feedback",
+    "pluralName": "feedbacks",
+    "displayName": "feedback",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "corrida_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::corrida.corrida",
+      "inversedBy": "feedbacks"
+    },
+    "user_id": {
+      "type": "integer"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "tipos_de_avaliacao": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tipos-de-avaliacao.tipos-de-avaliacao",
+      "inversedBy": "feedbacks"
+    }
+  }
+}

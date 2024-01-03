@@ -14,5 +14,12 @@ export default {
    * This gives you an opportunity to set up your data model,
    * run jobs, or perform some special logic.
    */
-  bootstrap(/*{ strapi }*/) {},
+  bootstrap({ strapi }) {
+    // const { actionProvider } = strapi.admin.services.permission;
+    // actionProvider.register({
+    //   uid: 'api::feedback.calculate-average',
+    //   displayName: 'Calculate average',
+    //   pluginName: 'admin',
+    // });
+  },
 };

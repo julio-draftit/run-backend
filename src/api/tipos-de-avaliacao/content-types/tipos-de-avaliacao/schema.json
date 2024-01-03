@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipos_de_avaliacaos",
+  "info": {
+    "singularName": "tipos-de-avaliacao",
+    "pluralName": "tipos-de-avaliacaos",
+    "displayName": "Tipos de avaliação",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Option": {
+      "type": "enumeration",
+      "enum": [
+        "Antes da Prova",
+        "Durante a Prova",
+        "Depois da prova"
+      ]
+    },
+    "Nome": {
+      "type": "string"
+    },
+    "feedbacks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feedback.feedback",
+      "mappedBy": "tipos_de_avaliacao"
+    }
+  }
+}
