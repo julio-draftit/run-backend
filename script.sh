@@ -6,3 +6,5 @@ sudo chmod 777 /var/www/html/run-backend/src/api/home/documentation/1.0.0/home.j
 sudo chmod 777 /var/www/html/run-backend/src/api/tipos-de-avaliacao/documentation/1.0.0/tipos-de-avaliacao.json
 sudo chmod 777 /var/www/html/run-backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json
 sudo chmod 777 /var/www/html/run-backend/src/api/organizador/documentation/1.0.0/organizador.json
+sudo chmod 777 /var/www/html/run-backend/src/api/privacy-policy/documentation/1.0.0/privacy-policy.json
+sudo chmod 777 /var/www/html/run-backend/src/api/terms-of-service/documentation/1.0.0/terms-of-service.json
