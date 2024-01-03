@@ -29,6 +29,9 @@
       "relation": "manyToOne",
       "target": "api::tipos-de-avaliacao.tipos-de-avaliacao",
       "inversedBy": "feedbacks"
+    },
+    "Comentario": {
+      "type": "string"
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-01-03T02:03:44.194Z"
+    "x-generation-date": "2024-01-03T02:12:43.228Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2079,7 +2079,8 @@
                                       "enum": [
                                         "Antes da Prova",
                                         "Durante a Prova",
-                                        "Depois da prova"
+                                        "Depois da prova",
+                                        "Nenhuma"
                                       ]
                                     },
                                     "Nome": {
@@ -2152,6 +2153,9 @@
                               }
                             }
                           }
+                        },
+                        "Comentario": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -2318,6 +2322,9 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "Comentario": {
+                "type": "string"
               }
             }
           }
@@ -3355,7 +3362,8 @@
                                                   "enum": [
                                                     "Antes da Prova",
                                                     "Durante a Prova",
-                                                    "Depois da prova"
+                                                    "Depois da prova",
+                                                    "Nenhuma"
                                                   ]
                                                 },
                                                 "Nome": {
@@ -3428,6 +3436,9 @@
                                           }
                                         }
                                       }
+                                    },
+                                    "Comentario": {
+                                      "type": "string"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -3560,6 +3571,9 @@
                 }
               }
             }
+          },
+          "Comentario": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -6414,7 +6428,8 @@
                 "enum": [
                   "Antes da Prova",
                   "Durante a Prova",
-                  "Depois da prova"
+                  "Depois da prova",
+                  "Nenhuma"
                 ]
               },
               "Nome": {
@@ -6492,7 +6507,8 @@
             "enum": [
               "Antes da Prova",
               "Durante a Prova",
-              "Depois da prova"
+              "Depois da prova",
+              "Nenhuma"
             ]
           },
           "Nome": {
@@ -7544,7 +7560,8 @@
                                       "enum": [
                                         "Antes da Prova",
                                         "Durante a Prova",
-                                        "Depois da prova"
+                                        "Depois da prova",
+                                        "Nenhuma"
                                       ]
                                     },
                                     "Nome": {
@@ -7617,6 +7634,9 @@
                               }
                             }
                           }
+                        },
+                        "Comentario": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",

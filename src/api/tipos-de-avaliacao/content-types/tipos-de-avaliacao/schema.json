@@ -17,8 +17,10 @@
       "enum": [
         "Antes da Prova",
         "Durante a Prova",
-        "Depois da prova"
-      ]
+        "Depois da prova",
+        "Nenhuma"
+      ],
+      "default": "Nenhuma"
     },
     "Nome": {
       "type": "string"
