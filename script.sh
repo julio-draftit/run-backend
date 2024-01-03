@@ -5,3 +5,4 @@ sudo chmod 777 /var/www/html/run-backend/src/api/corrida/documentation/1.0.0/cor
 sudo chmod 777 /var/www/html/run-backend/src/api/home/documentation/1.0.0/home.json
 sudo chmod 777 /var/www/html/run-backend/src/api/tipos-de-avaliacao/documentation/1.0.0/tipos-de-avaliacao.json
 sudo chmod 777 /var/www/html/run-backend/src/extensions/documentation/documentation/1.0.0/full_documentation.json
+sudo chmod 777 /var/www/html/run-backend/src/api/organizador/documentation/1.0.0/organizador.json
