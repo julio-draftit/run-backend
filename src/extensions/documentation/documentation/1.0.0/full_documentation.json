@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-01-03T02:40:01.086Z"
+    "x-generation-date": "2024-01-04T00:14:16.762Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -25,7 +25,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:1337/api",
+      "url": "https://api.runview.com.br/api",
       "description": "Development server"
     }
   ],
@@ -2157,6 +2157,12 @@
                         "Comentario": {
                           "type": "string"
                         },
+                        "Nome": {
+                          "type": "string"
+                        },
+                        "Email": {
+                          "type": "string"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -2324,6 +2330,12 @@
                 "example": "string or id"
               },
               "Comentario": {
+                "type": "string"
+              },
+              "Nome": {
+                "type": "string"
+              },
+              "Email": {
                 "type": "string"
               }
             }
@@ -3440,6 +3452,12 @@
                                     "Comentario": {
                                       "type": "string"
                                     },
+                                    "Nome": {
+                                      "type": "string"
+                                    },
+                                    "Email": {
+                                      "type": "string"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -3573,6 +3591,12 @@
             }
           },
           "Comentario": {
+            "type": "string"
+          },
+          "Nome": {
+            "type": "string"
+          },
+          "Email": {
             "type": "string"
           },
           "createdAt": {
@@ -7636,6 +7660,12 @@
                           }
                         },
                         "Comentario": {
+                          "type": "string"
+                        },
+                        "Nome": {
+                          "type": "string"
+                        },
+                        "Email": {
                           "type": "string"
                         },
                         "createdAt": {

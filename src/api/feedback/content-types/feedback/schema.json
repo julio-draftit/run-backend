@@ -32,6 +32,12 @@
     },
     "Comentario": {
       "type": "string"
+    },
+    "Nome": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "string"
     }
   }
 }
