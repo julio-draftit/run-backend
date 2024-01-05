@@ -10,39 +10,37 @@ export default {
     const { corrida_id } = ctx.params;
 
     try {
-      const tiposDeAvaliacao = await strapi.entityService.findMany('api::tipos-de-avaliacao.tipos-de-avaliacao', {
-        filters: { corrida_id },
-        populate: ['feedbacks'],
-      });
-
-      const averagesByType = [];
-      await tiposDeAvaliacao.forEach(tipo => (
-        averagesByType.push({
-        tipo_de_avaliacao: tipo,
-        average: 0,
-      })));
+      const tiposDeAvaliacao = await strapi.entityService.findMany('api::tipos-de-avaliacao.tipos-de-avaliacao');
 
       const feedbacks = await strapi.entityService.findMany('api::feedback.feedback', {
         filters: { corrida_id },
         populate: { tipos_de_avaliacao: true },
       });
 
+      const averagesByType = tiposDeAvaliacao.map(tipo => ({
+        tipo_de_avaliacao: {
+          ...tipo,
+          feedbacks: [],
+        },
+        average: 0,
+      }));
 
       feedbacks.forEach(feedback => {
-        const tipoAvaliacao = feedback.tipos_de_avaliacao;
-
-        const index = averagesByType.findIndex(average => average.tipo_de_avaliacao.id === tipoAvaliacao.id);
-
-        if (index !== -1) {
-          averagesByType[index].average += feedback.rating;
+        const averageEntry = averagesByType.find(average => average.tipo_de_avaliacao.id === feedback.tipos_de_avaliacao.id);
+        if (averageEntry) {
+          averageEntry.tipo_de_avaliacao.feedbacks.push({
+            ...feedback,
+            tipos_de_avaliacao: undefined,
+          });
+          // Soma o rating para cálculo da média
+          averageEntry.average += feedback.rating;
         }
       });
 
-      averagesByType.forEach(average => {
-        if (average.tipo_de_avaliacao.feedbacks.length > 0) {
-          average.average = (average.average / average.tipo_de_avaliacao.feedbacks.length).toFixed(1);
-        } else {
-          average.average = 0; // Defina como 0 se não houver feedbacks
+      averagesByType.forEach(averageEntry => {
+        if (averageEntry.tipo_de_avaliacao.feedbacks.length > 0) {
+          // Calcula a média e arredonda para uma casa decimal
+          averageEntry.average = parseFloat((averageEntry.average / averageEntry.tipo_de_avaliacao.feedbacks.length).toFixed(1));
         }
       });
 
