@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-01-05T21:10:35.614Z"
+    "x-generation-date": "2024-02-29T14:11:05.184Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -95,6 +95,9 @@
           "Nome": {
             "type": "string"
           },
+          "Ordenacao": {
+            "type": "integer"
+          },
           "locale": {
             "type": "string"
           }
@@ -111,6 +114,9 @@
             "properties": {
               "Nome": {
                 "type": "string"
+              },
+              "Ordenacao": {
+                "type": "integer"
               },
               "locale": {
                 "type": "string"
@@ -238,6 +244,9 @@
         "properties": {
           "Nome": {
             "type": "string"
+          },
+          "Ordenacao": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",
@@ -1485,6 +1494,9 @@
                     "properties": {
                       "Nome": {
                         "type": "string"
+                      },
+                      "Ordenacao": {
+                        "type": "integer"
                       },
                       "createdAt": {
                         "type": "string",
@@ -3041,6 +3053,9 @@
                                 "properties": {
                                   "Nome": {
                                     "type": "string"
+                                  },
+                                  "Ordenacao": {
+                                    "type": "integer"
                                   },
                                   "createdAt": {
                                     "type": "string",
@@ -7202,6 +7217,9 @@
                                               "properties": {
                                                 "Nome": {
                                                   "type": "string"
+                                                },
+                                                "Ordenacao": {
+                                                  "type": "integer"
                                                 },
                                                 "createdAt": {
                                                   "type": "string",
