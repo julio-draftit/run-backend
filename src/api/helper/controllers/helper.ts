@@ -12,6 +12,7 @@ module.exports = createCoreController('api::helper.helper', ({ strapi }) => ({
         const results = await knex('corridas')
           .select('UF')
           .count('* as count')
+          .whereNotNull('UF')
           .groupBy('UF')
           .orderBy('UF');
     
