@@ -47,6 +47,14 @@
     },
     "Number_4": {
       "type": "string"
+    },
+    "image_destaque": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
