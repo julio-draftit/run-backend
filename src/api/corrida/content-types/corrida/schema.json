@@ -126,6 +126,11 @@
       },
       "type": "string",
       "default": "Brasil"
+    },
+    "grupo_de_avaliacao": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::grupo-de-avaliacao.grupo-de-avaliacao"
     }
   }
 }
