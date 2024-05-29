@@ -30,6 +30,12 @@
       "relation": "oneToMany",
       "target": "api::feedback.feedback",
       "mappedBy": "tipos_de_avaliacao"
+    },
+    "grupo_de_avaliacaos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::grupo-de-avaliacao.grupo-de-avaliacao",
+      "inversedBy": "tipos_de_avaliacaos"
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "grupo_de_avaliacaos",
+  "info": {
+    "singularName": "grupo-de-avaliacao",
+    "pluralName": "grupo-de-avaliacaos",
+    "displayName": "Grupo de avaliação",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome_do_grupo": {
+      "type": "string"
+    },
+    "tipos_de_avaliacaos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tipos-de-avaliacao.tipos-de-avaliacao",
+      "mappedBy": "grupo_de_avaliacaos"
+    }
+  }
+}
