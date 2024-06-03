@@ -9,3 +9,4 @@ sudo chmod 777 /var/www/html/run-backend/src/api/organizador/documentation/1.0.0
 sudo chmod 777 /var/www/html/run-backend/src/api/privacy-policy/documentation/1.0.0/privacy-policy.json
 sudo chmod 777 /var/www/html/run-backend/src/api/terms-of-service/documentation/1.0.0/terms-of-service.json
 sudo chmod 777 /var/www/html/run-backend/src/api/grupo-de-avaliacao/documentation/1.0.0/grupo-de-avaliacao.json
+sudo chmod 777 /var/www/html/run-backend/src/api/helper/documentation/1.0.0/helper.json
